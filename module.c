@@ -1,20 +1,21 @@
+// SPDX-License-Identifier: GPL-2.0
 #include <linux/module.h> //required for all kernel modules
 #include <linux/kernel.h> //for KERN_INFO
 #include <linux/init.h>   //for __init and __exit macros
 
-MODULE_LICENSE("GNU General Public License v2");
-MODULE_AUTHOR("NAME");
+MODULE_LICENSE("GPL v2");
+MODULE_AUTHOR("PRIYA MOHATA");
 MODULE_DESCRIPTION("Hello World Kernel Module");
 
 static int __init my_init(void)
 {
-	printk(KERN_INFO "Hello world! I am NAME\n");
+	pr_info("Hello world! I am PRIYA MOHATA\n");
 	return 0;
 }
 
 static void __exit my_exit(void)
 {
-	printk(KERN_INFO "Goodbye world!\n");
+	pr_info("Goodbye world!\n");
 }
 
 module_init(my_init);
